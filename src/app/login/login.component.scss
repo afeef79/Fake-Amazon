@@ -43,6 +43,7 @@ h1 {
   font-weight: 400;
   font-size: 28px;
   line-height: 1.2;
+  margin-bottom: 15px;
 }
 label {
   padding: 0px 0px 2px 2px;
@@ -139,7 +140,7 @@ input {
   margin: 0 10px;
 }
 a:link{
-  color: blue;
+  color: #1A84CF
 }
 a:hover{
   color: #DF9000;  
@@ -147,7 +148,7 @@ a:hover{
 @font-face {
   font-family: 'Amazon Ember';
   src: url('/Amazon Ember.ttf') format('truetype');
-  font-weight: normal;
+  // font-weight: normal;
   font-style: normal;
 }
 

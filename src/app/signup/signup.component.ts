@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router,RouterLink } from '@angular/router';
+import { FormsModule ,FormGroup, FormControl, ReactiveFormsModule,Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule,CommonModule,RouterLink],
+  imports: [FormsModule,CommonModule,RouterLink,ReactiveFormsModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
- 
+  selectedCountryCode = '+91';
   countryCodes = [
     { name: 'AF', code: '+93' },  // Afghanistan
     { name: 'AL', code: '+355' }, // Albania
@@ -55,12 +56,28 @@ export class SignupComponent {
     { name: 'UK', code: '+44' },  // United Kingdom
     { name: 'US', code: '+1' },   // United States
     { name: 'VN', code: '+84' },  // Vietnam
+    
   ];
-  selectedCountryCode = '+91';
+ 
+  signup = new FormGroup({
+    Name:new FormControl('', [Validators.required]),
+    number: new FormControl(''),
+    password: new FormControl(''),
+    countryCode: new FormControl('+91'),
+  });
 
   constructor(private router:Router){}
-  homepage(){
-    this.router.navigate(['/home'])
 
-  }
+  Submit(){
+    if(this.signup.valid){
+    const signupdata={
+      ...this.signup.value,
+      number: this.selectedCountryCode + this.signup.value.number,
+    };
+    console.log(signupdata);
+    this.router.navigate(['/home']) 
+  }else{
+    
+  } 
+  };
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink,RouterOutlet,Router } from '@angular/router';
-import { FormsModule ,FormGroup, FormControl, ReactiveFormsModule,FormBuilder } from '@angular/forms';
+import { FormsModule ,FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../user.service';
 
@@ -20,19 +20,22 @@ export class LoginComponent {
     password: new FormControl(''),
   });
 
- constructor(private router:Router,private service:UserService,private fb: FormBuilder){}
+  isViewVisible = false;
 
+ constructor(private router:Router,private service:UserService,){}
  signup(){
   this.router.navigate(['signup']) 
  }
 
-  
-
 onSubmit(){
-  //const logindata=this.login.value
-  // this.service.logindata(logindata)
-  console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-
-  this.router.navigate(['/home'])
+  // const logindata=this.login.value
+  // if(this.service.verifylogindata(logindata)){
+  //   this.isViewVisible = true;
+  //   console.log('loginsuccessful');
+  //   this.router.navigate(['/home'])  
+  // }else{
+  //   console.log('invalid data');
+  //   this.isViewVisible = true;  
+  // }  
 }
 }

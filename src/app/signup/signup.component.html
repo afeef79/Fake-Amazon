@@ -9,31 +9,34 @@
 <body>
   <div class="container-fluid main">
     <img src="/amazon-in-logo.png" alt="amazon" />
-    <!-- <form [formGroup]="Login" (submit)="Submit()"> -->
+    <form [formGroup]="signup" (ngSubmit)="Submit()">
     <div class="signup">
       <h1 id="signuptxt">Create Account</h1>
       <label for="name">
         <span>Your Name</span><br>
-        <input type="text" class="form-control" name="name" id="" placeholder="First and Last name" />
+        <input type="text" class="form-control" name="name" id="" placeholder="First and Last name"  formControlName="Name"/>
+        <div *ngIf="signup.controls.Name?.invalid && signup.controls.Name?.touched" class="text-danger text-size">
+          Name is required.
+        </div>
       </label><br>
       <label for="mobilenumber">
         <span>Mobile number</span><br />
         <div class="mobile-number-container">
-          <select [(ngModel)]="selectedCountryCode">
+          <select formControlName="countryCode">
             <option *ngFor="let country of countryCodes" [value]="country.code">
               {{ country.name }} {{ country.code }}
             </option>
           </select>
-          <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="mobile number" />
+          <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="mobile number" formControlName="number"/>
         </div>
       </label>
       <br>
       <label for="password">
         <span>password</span>
         <br>
-        <input type="text" class="form-control" name="password" id="" placeholder="At least 6 characters" />
+        <input type="text" class="form-control" name="password" id="" placeholder="At least 6 characters" formControlName="password"/>
       </label><br>
-      <button type="submit" id="amazon" (click)="homepage()">Submit</button>
+      <button type="submit" id="amazon" >Submit</button>
       <div id="divider"></div>
       <p>Already have an account? <a href="#">Signin</a></p>
       <p id="conditon">By creating an account or logging in,you need Amazon's<a href="https://www.amazon.in/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=200545940">Conditions of use </a> and <a href="https://www.amazon.in/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&nodeId=200534380">Privacy Notice</a></p>
@@ -47,7 +50,7 @@
       <span class="links" id="special">
         © 1996-2024, Amazon.com, Inc. or its affiliates</span>
     </div>
-    <!-- </form>-->
+    </form>
   </div>
 </body>
 

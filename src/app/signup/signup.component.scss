@@ -17,6 +17,9 @@ body {
     margin-bottom: 22px;
     margin-top: 10px;
   }
+  input.ng-invalid.ng-touched {
+    border-color: red;
+  }
   #amazon {
     width: 320px;
     height: 32px;
