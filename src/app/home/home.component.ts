@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  getdata:any
+getdata:any
 constructor( private service:ProductService){
 this.getdata=this.service.productdetails['id_123'];
 console.log(this.getdata);
-
 }
 }

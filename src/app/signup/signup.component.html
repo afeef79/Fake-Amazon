@@ -16,7 +16,7 @@
         <span>Your Name</span><br>
         <input type="text" class="form-control" name="name" id="" placeholder="First and Last name"  formControlName="Name"/>
         <div *ngIf="signup.controls.Name?.invalid && signup.controls.Name?.touched" class="text-danger text-size">
-          Name is required.
+          <i>!</i>&nbsp; Name is required.
         </div>
       </label><br>
       <label for="mobilenumber">
@@ -27,7 +27,10 @@
               {{ country.name }} {{ country.code }}
             </option>
           </select>
-          <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="mobile number" formControlName="number"/>
+          <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="mobile number" formControlName="mobilenumber"/><br>
+        </div>
+        <div *ngIf="signup.controls.mobilenumber?.invalid && signup.controls.mobilenumber?.touched" class="text-danger text-size">
+          <i>!</i>&nbsp; Enter a valid mobilenumber.
         </div>
       </label>
       <br>
@@ -35,6 +38,9 @@
         <span>password</span>
         <br>
         <input type="text" class="form-control" name="password" id="" placeholder="At least 6 characters" formControlName="password"/>
+        <div *ngIf="signup.controls.password?.invalid && signup.controls.password?.touched" class="text-danger text-size">
+          <i>!</i>&nbsp; Password must be at least 6 characters.
+        </div>
       </label><br>
       <button type="submit" id="amazon" >Submit</button>
       <div id="divider"></div>

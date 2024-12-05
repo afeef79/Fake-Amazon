@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router,RouterLink } from '@angular/router';
 import { FormsModule ,FormGroup, FormControl, ReactiveFormsModule,Validators} from '@angular/forms';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -61,22 +62,21 @@ export class SignupComponent {
  
   signup = new FormGroup({
     Name:new FormControl('', [Validators.required]),
-    number: new FormControl(''),
-    password: new FormControl(''),
+    mobilenumber: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
     countryCode: new FormControl('+91'),
   });
 
-  constructor(private router:Router){}
+  constructor(private router:Router,private service:UserService){}
 
   Submit(){
     if(this.signup.valid){
-    const signupdata={
-      ...this.signup.value,
-      number: this.selectedCountryCode + this.signup.value.number,
-    };
+    const signupdata=this.signup.value 
+    this.service.savesignupdata(signupdata)
     console.log(signupdata);
     this.router.navigate(['/home']) 
   }else{
+    console.log('form is invalid');
     
   } 
   };
