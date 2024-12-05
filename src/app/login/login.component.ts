@@ -41,5 +41,6 @@ onSubmit(){
     console.log('invalid data');
     this.isViewVisible = false;  
   }  
+   
 }
 }
