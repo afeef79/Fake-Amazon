@@ -32,6 +32,124 @@ export class ProductService {
     { id: 100018, item: 'Back Cover', name: 'Spigen Ultra Hybrid Back Cover Case Compatible with Galaxy S23 Ultra (TPU + Poly Carbonate | Zero One)', store: 'Spigen', price: 1614, reviews: 6629, deliveringplace: 'Bengaluru', pincode: 560108, add: 'Dailyobjects Polycarbonate  Beam', discountableprice: 2500, warrenty: 1, availability: 'available', brand: 'Spigen', color: 'Zero one', itemweight: '100grame', material: 'Polycarbonate, Thermoplastic', SpecialFeature: '  Licensed under Samsung', About: '• [Compatibility] Spigen Genuine Case Compatible with Galaxy S23 Ultra •[Licensed Product] Licensed under Samsung Mobile Accessory Partnership Program • [Material] Hybrid structure of PC (Poly Carbonate) and TPU • [Modern Design] Sophisticated design that perfectly uses the advantage of the scratch-resistant PC plate and the flexible TPU • [Protection] Edge protection through air cushion technology' },
     { id: 100019, item: ' Power Bankt', name: 'Ambrane 10000mAh Slim Power Bank, 20W Fast Charging, Dual Output, Type C PD (Input & Output), Quick Charge, Li-Polymer, Multi-Layer Protection for iPhone, Anrdoid & Other Devices (Stylo 10K, Blue)', store: 'Ambrane', price: 799, reviews: 17346, deliveringplace: 'Bengaluru', pincode: 560108, add: 'Amazone Basics 10000 mah Lithium Battery', discountableprice: 2799, warrenty: 1, availability: 'available', brand: 'Ambrane', color: 'blue', itemweight: '700grame', material: 'Aluminium,Copper', SpecialFeature: 'Fast Charging, LED Indicator Lights, Short Circuit Protection, Over Charging Protection, Slim', About: '• 20W Fast Charging Output– Powerful 20 Watts PD and QC output for boosted charging speed, so that you always stay ahead in the league. It carries an extensive capacity to charge your mobile 50% in as quickly as 30 minutes on average •Power-packed 10000mAh- Lithium Polymer 10000mAh capacity allows you to efficiently charge your devices multiple times. Suitable for Smartphones, tablets, Earbuds and other electronic devices. • Quick Charge 3.0 & Power Delivery Technology - 20W Fast Charging Input – The powerbank itself can get charged in 4 to 5 hours as it has Power Delivery Technology which supports 20W fast charging input via Type C port. • Input: 20W Type C - Charge Multiple Devices – With 1 USB port and 1 Type C port for output, it can charge 2 devices at the same time. • Sleek and Stylish- Supremely modish and handy design makes it a style statement while its compact body makes it extremely travel-friendly at the same time.' },
   ]
+  product={
+    top:[{
+      id:1,
+      name:"id-15",
+      price:29999,
+      titel:'home interior '
+
+    },
+    {
+      id:2,
+      name:"id-16",
+      price:19999,
+      titel:'Figurines '
+
+    },
+    {
+      id:3,
+      name:"id-17",
+      price:1999,
+      titel:'Home storage '
+
+    },{
+      id:4,
+      name:"id-18",
+      price:5999,
+      titel:'Lighting solutions'
+
+    },
+    ],
+    first:[{
+      id:5,
+      name:"id-19",
+      price:29999,
+      titel:'Hp Wired'
+
+    },
+    {
+      id:6,
+      name:"id-20",
+      price:19999,
+      titel:'ZEBRONICS '
+
+    },
+    {
+      id:7,
+      name:"id-21",
+      price:1999,
+      titel:'boAt'
+
+    },{
+      id:8,
+      name:"id-22",
+      price:5999,
+      titel:'boAt'
+
+    },
+    ],
+    second:[{
+      id:9,
+      name:"id-23",
+      price:29999,
+      titel:'Samsung'
+
+    },
+    {
+      id:10,
+      name:"id-24",
+      price:19999,
+      titel:'Redmi'
+
+    },
+    {
+      id:11,
+      name:"id-25",
+      price:1999,
+      titel:'OnePlusNor'
+
+    },{
+      id:12,
+      name:"id-26",
+      price:5999,
+      titel:'iQOOZ9'
+
+    },
+  ],
+  third:[{
+      id:13,
+      name:"id-27",
+      price:29999,
+      titel:'Bedsheets'
+    },
+    {
+      id:14,
+      name:"id-28",
+      price:2599,
+      titel:'Curtains'
+    },
+    {
+      id:15,
+      name:"id-29",
+      price:1599 ,
+      titel:'Bedsheets'
+    },{
+      id:16,
+      name:"id-30",
+      price:2599,
+      titel:'Curtains'
+    },
+    ],
+  
+
+  
+  }
+  constructor() { }
+  grtproduct(){
+    return this.product
+  }
+
 
   details(id:string){
     return null
