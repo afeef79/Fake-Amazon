@@ -1,0 +1,358 @@
+/* Main Container */
+.amazon-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensures all sections stay in one row */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  overflow-x: auto; /* Adds horizontal scroll for smaller screens */
+}
+
+/* Prime Video Section */
+.prime-video-section {
+  flex: 2; /* Occupies more space */
+  position: relative;
+  // background-color: black;
+  color: white;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.prime-video-image {
+  width: 120vh;
+  height: auto;
+}
+
+.prime-video-content {
+  position: absolute;
+  bottom: 320px;
+  left: 20px;
+  z-index: 1;
+}
+
+.prime-video-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.prime-video-name {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.prime-video-button {
+  margin-top: 10px;
+  color: white;
+  padding: 92px 12px;
+  font-size: 0.9rem;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 220px;
+}
+
+/* Deal Section */
+.deal-section {
+  flex: 1; /* All sections adjust equally */
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 250px; /* Ensures sections don't shrink too much */
+}
+
+.deal-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.deal-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.deal-button {
+  color: #007185;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 190px;
+}
+
+/* Furniture Grid */
+.furniture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.furniture-item {
+  text-align: center;
+}
+
+.furniture-image {
+  width: 100%;
+  height: auto;
+}
+
+.furniture-description {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .amazon-container {
+    flex-wrap: wrap; /* Allows sections to stack in small screens */
+  }
+
+  .deal-section, .prime-video-section {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+
+  .furniture-grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+  }
+}
+
+/* Carousel Container */
+.carousel-container {
+  max-width: 100%;
+  height: 50vh;
+  margin: 20px auto;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Prevent items from overflowing the container */
+}
+
+/* Carousel Items */
+.carousel {
+  display: flex;
+  width: 80vw;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: calc(100% / 6); /* Default for 6 items visible */
+  padding: 5px;
+  text-align: center;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Navigation Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2;
+  width: 50px; /* Adjust width to fit the design */
+  height: 100px; /* Adjust height to fit the design */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Light border for the button */
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Size of the arrow */
+  color: #555; /* Arrow color */
+  background-color: #f5f5f5; /* Slightly darker background on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  border-radius: 4px;
+}
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+.seemore{
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+  color: rgba(52, 52, 188, 0.797);
+}
+.seemore:hover{
+color: #7E93A4;
+
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: calc(100% / 2); /* Show 2 items on smaller screens */
+  }
+
+  .carousel-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    min-width: 100%; /* Show 1 item on very small screens */
+  }
+}
+/* Card container */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 300px;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin: 1rem;
+}
+
+/* Product title */
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.product-image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.product-description {
+  font-size: 1rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: black; /* Green color for price */
+}
+
+.product-mrp {
+  text-decoration: line-through;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Thumbnail slider */
+.thumbnail-slider {
+  display: flex;
+  // gap: 0.5rem;
+  // overflow-x: auto;
+}
+
+.thumbnail {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width:70%;
+  object-fit: cover;
+  align-items: center;
+  padding: 5px;
+}
+
+/* See more link */
+.see-more {
+  color: #007bff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+.product-view {
+  text-align: center;
+}
+
+.main-image {
+  width: auto;
+  height: auto;
+  margin-left: 70px;
+  align-items: center;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+  align-items: center;
+}
+
+.thumbnail:hover {
+  border: 2px solid #007bff;
+}
+
+.thumbnail.selected {
+  border: 2px solid #007bff;
+  box-shadow: 0px 0px 6px #007bff;
+}
+@media (max-width: 768px) {
+  .main-image {
+    max-width: 90%;  /* Use 90% of the container width on medium screens (tablets) */
+  }
+
+  .thumbnail {
+    width: 60px;  /* Smaller thumbnails on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image {
+    max-width: 100%;  /* Use 100% width on small screens (mobiles) */
+  }
+
+  .thumbnail {
+    width: 50px;  /* Even smaller thumbnails on mobile */
+  }
+
+  .thumbnails {
+    justify-content: space-around;  /* Space thumbnails evenly on mobile */
+  }
+}
