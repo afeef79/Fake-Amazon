@@ -40,7 +40,7 @@ export class FooterComponent {
 
   }
 
-  items = [
+  items3 = [
     { image: 'id-1.jpg', name: 'Headphone 1' },
     { image: 'id-2.jpg', name: 'Headphone 2' },
     { image: 'id-3.jpg', name: 'Headphone 3' },
@@ -60,15 +60,15 @@ export class FooterComponent {
 
   scrollPosition = 0; // Keeps track of current scroll position
 
-  scrollLeft() {
-    const container = document.querySelector('.carousel-items') as HTMLElement;
+  scrollLeft3() {
+    const container = document.querySelector('.carousel-items3') as HTMLElement;
     const itemWidth = container.clientWidth; // Width of visible items
     this.scrollPosition = Math.max(this.scrollPosition - itemWidth, 0);
     container.style.transform = `translateX(-${this.scrollPosition}px)`; // Fixed: Use backticks
   }
   
-  scrollRight() {
-    const container = document.querySelector('.carousel-items') as HTMLElement;
+  scrollRight3() {
+    const container = document.querySelector('.carousel-items3') as HTMLElement;
     const itemWidth = container.clientWidth; // Width of visible items
     const maxScroll = container.scrollWidth - itemWidth; // Maximum scrollable area
     this.scrollPosition = Math.min(this.scrollPosition + itemWidth, maxScroll);
@@ -82,8 +82,9 @@ export class FooterComponent {
     console.log('Video is being watched!');
   }
   navigateToDetails() {
-    this.routes.navigate(['/product']);
-   
+    this.routes.navigate(['/privacypolicy']);
+    console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbb");
+    
   }
 }
 
