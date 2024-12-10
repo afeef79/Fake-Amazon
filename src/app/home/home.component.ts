@@ -75,5 +75,3 @@ export class HomeComponent implements AfterViewInit {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
 }
-
-
