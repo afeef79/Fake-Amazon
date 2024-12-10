@@ -1,3 +1,9 @@
 <p>home works!</p>
 <p *ngIf="getdata">{{ getdata.price}}</p>
-<img [src]="getdata.store + '.jpg'" alt="{{ getdata.store }}">
+<img 
+  [src]="getdata.store + '.jpg'"
+  alt="{{ getdata.store }}" 
+  (click)="navigateToDetails(getdata.id)"
+  style="cursor: pointer;"
+/>
+

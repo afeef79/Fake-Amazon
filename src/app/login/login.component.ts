@@ -32,7 +32,7 @@ onSubmit(){
   // if(this.service.verifylogindata(logindata)){
   //   this.isViewVisible = true;
   //   console.log('loginsuccessful');
-  //   this.router.navigate(['/home'])  
+    this.router.navigate(['/home'])  
   // }else{
   //   console.log('invalid data');
   //   this.isViewVisible = true;  
