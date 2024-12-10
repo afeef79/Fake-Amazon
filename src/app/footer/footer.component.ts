@@ -1,16 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { Router, RouterLink,RouterOutlet,RouterModule} from '@angular/router';
-import { ProductService } from '../product.service';
 import { CommonModule } from '@angular/common';
+import { ProductService } from '../product.service';
+
+
 
 @Component({
-  selector: 'app-bottompage',
+  selector: 'app-footer',
   standalone: true,
   imports: [RouterLink,CommonModule,RouterOutlet,RouterModule],
-  templateUrl: './bottompage.component.html',
-  styleUrl: './bottompage.component.scss'
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss'
 })
-export class BottompageComponent {
+export class FooterComponent {
   product:any;
   topCategory:any;
   firstCategory:any;
@@ -22,9 +24,7 @@ export class BottompageComponent {
   sevnthCategory:any;
   eithCategory:any;
 
-
   service:ProductService=inject(ProductService)
-
   constructor(private routes:Router){
     this.product=this.service.grtproduct()
     this.topCategory = this.product.top;
@@ -38,10 +38,8 @@ export class BottompageComponent {
     this.eithCategory = this.product.eith;
 
 
-
-
-
   }
+
   items = [
     { image: 'id-1.jpg', name: 'Headphone 1' },
     { image: 'id-2.jpg', name: 'Headphone 2' },
@@ -49,6 +47,7 @@ export class BottompageComponent {
     { image: 'id-4.jpg', name: 'Headphone 4' },
     { image: 'id-5.jpg', name: 'Headphone 5' },
     { image: 'id-6.jpg', name: 'Headphone 6' },
+    // { image: 'id-7.jpg', name: 'Headphone 7' },
     { image: 'id-8.jpg', name: 'Headphone 8' },
     { image: 'id-9.jpg', name: 'Headphone 9' },
     { image: 'id-10.jpg', name: 'Headphone 10' },
@@ -56,7 +55,6 @@ export class BottompageComponent {
     { image: 'id-12.jpg', name: 'Headphone 12' },
     { image: 'id-13.jpg', name: 'Headphone 13' },  
     { image: 'id-14.jpeg', name: 'Headphone 14' },
-    
 
   ];
 
@@ -77,10 +75,6 @@ export class BottompageComponent {
     container.style.transform = `translateX(-${this.scrollPosition}px)`; // Fixed: Use backticks
   }
   
-
-  
-  
-  
   carouselItems = Array.from({ length: 10 }, (_, i) => ({
   }));
 
@@ -92,3 +86,5 @@ export class BottompageComponent {
    
   }
 }
+
+

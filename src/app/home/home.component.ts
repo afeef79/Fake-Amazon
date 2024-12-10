@@ -1,10 +1,10 @@
  import { Component} from '@angular/core';
- import { HeaderSectionComponent } from "../header-section/header-section.component";
- import {BottompageComponent } from "../bottompage/bottompage.component";
+ import { FooterComponent } from '../footer/footer.component';
+ import { HeaderSectionComponent } from '../header-section/header-section.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderSectionComponent,BottompageComponent],
+  imports: [FooterComponent,HeaderSectionComponent ],
   templateUrl: './home.component.html', 
   styleUrls: ['./home.component.scss'] 
 })

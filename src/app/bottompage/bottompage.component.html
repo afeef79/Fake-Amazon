@@ -1,15 +1,9 @@
-<div class="container">
-  
-
-</div>
 <div class="carousel-container">
   <div class="carousel-wrapper">
-    <!-- Previous Button -->
     <button class="carousel-button prev" (click)="scrollLeft()">
       &#8249;
     </button>
 
-    <!-- Carousel Items -->
     <div class="carousel">
       <div class="carousel-items">
         <div class="carousel-item" *ngFor="let item of items">
@@ -17,38 +11,28 @@
         </div>
       </div>
     </div>
-
-    <!-- Next Button -->
     <button class="carousel-button next" (click)="scrollRight()">
       &#8250;
     </button>
   </div>
 </div>
-
-
-
+<p>hello2</p>
 <h2 class="h2">today sale offer all products</h2>
 <div class="container">
-
-
-
    <div class="card">
-    <h2>Starting ₹19999| Headphones</h2>
+    <h2>Starting ₹19999|  Brands Headphones & more</h2>
     <div class="card-items">
       @for (x of firstCategory; track x.name){
       <div class="item">
         <img [src]="x.name + '.jpg'" alt="{{x.name}}">
         <p>Starting {{x.price}} | {{x.titel}}</p>
-        <!-- <p><a routerLink="product"> helloo</a></p> -->
       </div>
     }
     </div>
     <a href="#" class="explore-link">See all offers</a>
   </div>
-
-
   <!-- Third Card -->
-   <div class="card">
+  <div class="card">
     <h2>Starting ₹19999 | Amazon Brands & more</h2>
     <div class="card-items">
       @for (x of secondCategory; track x.name){
@@ -60,9 +44,8 @@
     </div>
     <a href="#" class="explore-link">See more</a>
   </div>
-
   <!-- Fourth Card -->
-   <div class="card">
+ <div class="card">
     <h2>Starting ₹1599 | Brands Watch& more</h2>
     <div class="card-items">
       @for (x of thirdCategory; track x.name){
@@ -70,19 +53,17 @@
         <img [src]="x.name + '.jpg'" alt="{{x.name}}">
         <p>Starting ₹{{x.price}} | {{x.titel}}</p>
       </div>
-    }
-      
+      }
+  
     </div>
     <a href="#" class="explore-link">See more</a>
   </div>
-
-
   <!-- Fifth Card -->
-   <div class="card">
+    <div class="card">
     <img src="id-31.jpg" alt="Calendar poster" class="calendar-image">
     <p class="p">New display technology allows us to route display data under active pixels with no distortion,
       resulting in
-      thinner borders for larger 15.93 cm (6.3″) and 17.43 cm (6.9″) Super Retina XDR displays that feel great in your
+      thinner borders for larger 15.93 cm (6.3″) and 17.43 cm (6.9″) Super Retina XDR in your
       hand.
 
       iPhone 16 Pro is splash, water and dust resistant.3 It also has our latest-generation Ceramic Shield material
@@ -91,26 +72,49 @@
     <p class="coupon">Save ₹5 with coupon</p>
   </div>
 </div>
-
  <br>
-<div class="container">
+ <div class="grid-container">
+  <!-- Card 1 -->
   <div class="card">
-    <video controls loop muted autoplay poster="/thumbnail.jpg" width="580" height="360">
-      <source src="id-video.mp4" type="video/mp4">
-    </video>
+    <h3>Up to 75% off | Wall arts, painting, </h3>
+    @for (x of sixthCategory; track x.name){
+    <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+    <P>{{x.titel}}</P>
+    }
+    <a href="#">See more</a>
   </div>
-  <div class="card-add">
-    <img src="id-32.jpg" alt="apple promation" class="add-img">
-    <p class="description">iFFALCON by TCL U64 108 cm (43 inch) Ultra HD (4K) LED Smart Google TV with 24W   , HDR10</p>
-    <p class="rating">⭐⭐⭐⭐☆</p>
-    <p class="price">₹1,163 <span class="mrp">₹2,325</span> <span class="discount">(50% off)</span></p>
-    <button>Add to cart</button>
+  <!-- Card 2 -->
+  <div class="card">
+    <h3>Up to 75% off | Wall arts, painting, </h3>
+    @for (x of sevnthCategory; track x.name){
+    <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+    <P>{{x.titel}}</P>
+    }
+    <a href="#">See more</a>
+  </div>
+  <!-- Card 3 -->
+  <div class="card">
+    <h2>Starting ₹19999 | Amazon Brands & more</h2>
+    <div class="card-items">
+      @for (x of FifthCategory; track x.name){
+      <div class="item">
+        <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+          <p>Starting ₹{{x.price}} | {{x.titel}}</p>
+      </div>
+    }
+    </div>
+    <a href="#" class="explore-link">See more</a>
+  </div>
+  <!-- Card 4 -->
+  <div class="card">
+    <h3>Up to 75% off | Wall arts, painting, </h3>
+    @for (x of eithCategory; track x.name){
+    <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+    <P>{{x.titel}}</P>
+    }
+    <a href="#">See more</a>
   </div>
 </div>
-
-
-
-<!-- last page -->
 
  <footer class="footer">
   <div class="footer-top">
@@ -164,10 +168,6 @@
     <div class="footer-bottom-left">
       <span class="footer-logo">Amazon</span>
     </div>
-    <!-- <div class="footer-bottom-right">
-      <button class="language-select">English</button>
-      <button class="country-select">India</button>
-    </div> -->
   </div>
 </footer> 
 
@@ -213,6 +213,3 @@
       <p>&copy; 1996-2024, Amazon.com, Inc. or its affiliates</p>
   </div>
 </footer>
-
-
-

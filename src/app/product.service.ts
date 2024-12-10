@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
   flatobj: any = {};
-
   productdetails = [
     { id: 100000, item: 'AcLG1.5', name: 'LG 1.5 Ton 3 Star DUAL Inverter Split AC(Copper ,AI Convertable 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, Faster Cooling & Energy Saving,2024 Model, TS-Q18JNXE3, White)', store: 'LG', price: 43990, reviews: 2579, deliveringplace: 'Bengaluru', pincode: 560108, add: '5 in 1 Convertable ACs with AI Pro', discountableprice: 75000, warrenty: 1, availability: 'Unavailable', brand: 'LG', color: 'white', itemweight: 100, material: 'Aluminium,Copper', SpecialFeature: ' Oscillating air vanes for dissipation of cold air', About: '• Split AC with inverter compressor: Variable speed compressor which adjusts power depending on heat load. AI 6-in1 Convertible feature with 6 cooling modes allows for flexible temperature control by operating in different tonnages by adjusting cooling capacity (40% to 110%) to match different needs basis room size or occupancy, enhancing energy efficiency and providing personalized comfort with minimal effort (T&C Apply- *Maximum Cooling Capacity may vary from model to model between 110% to 116%.) • Capacity: 1 Ton. Suitable for Small Sized Rooms (110 to 120 sq. ft.) | 425/989 (In/Out) CFM Air Circulation, Cooling Capacity 3470 W & Ambient Temperature: 52 degree Celsius with 4 way air swing • Energy Rating: 4 Star - High energy efficiency | Annual Energy Consumption: 571.99 Units | ISEER Value: 4.7 (Please Refer Energy Label on Product Page or Contact Brand for More Details) •  Manufacturer Warranty: 1 Year on product, 5 Years on PCB and 10 Years on Compressor with Gas Charging (T&C Apply) • Condenser Coil: Copper With Ocean Black Protection prevents From Rust & Corrosion; Increase Durability ; Uninterrupted Cooling • Key Features: Dual Inverter Compressor, AI Convertible 6-in-1 Cooling, VIRAAT Mode, HD Filter with Anti-Virus Protection, ADC Sensor, Cools at 52⁰ C, Stabilizer free operation within 120V-290V voltage range , Magic Display for temperature, Noise Level: IDU - 21 (db) & ODU – 51 (db) • Special Features: Gold Fin+ - Increase durability, Ocean black protection, Ez Clean Filter, Low gas detection, 100% Copper Condensor, 6 Fan Speed steps; Hi grooved Copper; Smart Diagnosis System, Comfort Air, Monsoon Comfort/Fresh Dry, Auto Clean, Mute, On/ Off Timer, Sleep Mode, Auto Restart (Memory), On/Off Indicator, Dehumidifier' },
     { id: 100001, item: 'AcLG', name: 'LG 1 Ton 4 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 4 Way Swing, HD Filter with Anti-Virus Protection, Faster Cooling & Energy Saving, 2024 Model, TS-Q13JNYE, White)', store: 'LG', price: 35790, reviews: 2518, deliveringplace: 'Bengaluru', pincode: 560108, add: 'Godrej 1.5 Ton 5 star, 5 Years Comprehensive Warrenty', discountableprice: 54900, warrenty: 1, availability: 'available', brand: 'LG', color: 'white', itemweight: 110, material: 'Aluminium,Copper', SpecialFeature: ' Oscillating air vanes for dissipation of cold air', About: '• Split AC with inverter compressor: Variable speed compressor which adjusts power depending on heat load. AI 6-in1 Convertible feature with 6 cooling modes allows for flexible temperature control by operating in different tonnages by adjusting cooling capacity (40% to 110%) to match different needs basis room size or occupancy, enhancing energy efficiency and providing personalized comfort with minimal effort (T&C Apply- *Maximum Cooling Capacity may vary from model to model between 110% to 116%.) • Capacity: 1 Ton. Suitable for Small Sized Rooms (110 to 120 sq. ft.) | 425/989 (In/Out) CFM Air Circulation, Cooling Capacity 3470 W & Ambient Temperature: 52 degree Celsius with 4 way air swing • Energy Rating: 4 Star - High energy efficiency | Annual Energy Consumption: 571.99 Units | ISEER Value: 4.7 (Please Refer Energy Label on Product Page or Contact Brand for More Details) •  Manufacturer Warranty: 1 Year on product, 5 Years on PCB and 10 Years on Compressor with Gas Charging (T&C Apply) • Condenser Coil: Copper With Ocean Black Protection prevents From Rust & Corrosion; Increase Durability ; Uninterrupted Cooling • Key Features: Dual Inverter Compressor, AI Convertible 6-in-1 Cooling, VIRAAT Mode, HD Filter with Anti-Virus Protection, ADC Sensor, Cools at 52⁰ C, Stabilizer free operation within 120V-290V voltage range , Magic Display for temperature, Noise Level: IDU - 21 (db) & ODU – 51 (db) • Special Features: Gold Fin+ - Increase durability, Ocean black protection, Ez Clean Filter, Low gas detection, 100% Copper Condensor, 6 Fan Speed steps; Hi grooved Copper; Smart Diagnosis System, Comfort Air, Monsoon Comfort/Fresh Dry, Auto Clean, Mute, On/ Off Timer, Sleep Mode, Auto Restart (Memory), On/Off Indicator, Dehumidifier' },
@@ -139,11 +138,51 @@ export class ProductService {
       name:"id-30",
       price:2599,
       titel:'Curtains'
+    },],
+    fifth:[{
+      id:13,
+      name:"id-39",
+      price:29999,
+      titel:'Bedsheets'
+    },
+    {
+      id:14,
+      name:"id-40",
+      price:2599,
+    },
+    {
+      id:15,
+      name:"id-41",
+      price:1599 ,
+      titel:'Bedsheets'
+    },{
+      id:16,
+      name:"id-42",
+      price:2599,
+      titel:'Curtains'
     },
     ],
-  
-
-  
+    sixth:[{
+      id:13,
+      name:"id-36",
+      price:29999,
+      titel:'ArtX Paper Madhubani Art Paintings with Frame for Home Decor, Wall Painting for Living Room, Multicolor, Natural Wood Color Frames, Set of 4'
+    },
+    ], 
+    sevnth:[{
+      id:13,
+      name:"id-37",
+      price:29999,
+      titel:'The Castle Decor Golden Deer Wall Painting for Living Room, Bedroom, Hotels - Big Size Wooden Framed 27x48 Stunning Wall Art for Home Decoration, Perfect Wall Decor for Living Rooms and Bedrooms.'
+    },
+    ],
+    eith:[{
+      id:13,
+      name:"id-38",
+      price:29999,
+      titel:'kotart Premium Digital Madhubani Art Paintings with Frame for Home Decor - Framed Painting for Living Room Bedroom Office Room Decor - Painting for Wall Decoration - Pack of 6 (10X13, A)'
+    },
+    ]
   }
   constructor() { }
   grtproduct(){
