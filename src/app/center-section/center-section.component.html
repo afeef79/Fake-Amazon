@@ -106,3 +106,40 @@
     </div>
   </div>
 </div>
+
+<div class="deals-section gadget-section">
+  <h2 class="deals-title">{{ gadget.title }}</h2>
+  <div class="gadget-grid">
+    <div class="gadget-item" *ngFor="let item of gadget.items">
+      <img [src]="item.image" alt="{{ item.description }}" class="gadget-image">
+      <p class="gadget-description">{{ item.description }}</p>
+    </div>
+  </div>
+  <a href="#" class="deals-button explore-button">Explore all</a>
+</div>
+
+<div class="product-card" *ngFor="let product of products">
+  <h3 class="product-title">{{ product.title }}</h3>
+  <div class="product-main">
+    <img [src]="selectedImage" alt="Main Product Image" class="main-image" />
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">₹{{ product.price }} 
+          <span class="product-mrp">M.R.P: ₹{{ product.mrp }}</span>
+    </p>
+
+  <div class="thumbnail-slider">
+<div class="product-view">
+  <!-- Thumbnails -->
+  <div class="thumbnails">
+    <img
+      *ngFor="let image of thumbnails"
+      [src]="image"
+      alt="Thumbnail"
+      class="thumbnail"
+      (click)="onThumbnailClick(image)"
+    />
+  </div>
+</div>
+</div>
+</div>
+</div>
