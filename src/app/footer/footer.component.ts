@@ -40,14 +40,13 @@ export class FooterComponent {
 
   }
 
-  items3 = [
+  items5 = [
     { image: 'id-1.jpg', name: 'Headphone 1' },
     { image: 'id-2.jpg', name: 'Headphone 2' },
     { image: 'id-3.jpg', name: 'Headphone 3' },
     { image: 'id-4.jpg', name: 'Headphone 4' },
     { image: 'id-5.jpg', name: 'Headphone 5' },
     { image: 'id-6.jpg', name: 'Headphone 6' },
-    // { image: 'id-7.jpg', name: 'Headphone 7' },
     { image: 'id-8.jpg', name: 'Headphone 8' },
     { image: 'id-9.jpg', name: 'Headphone 9' },
     { image: 'id-10.jpg', name: 'Headphone 10' },
@@ -60,15 +59,15 @@ export class FooterComponent {
 
   scrollPosition = 0; // Keeps track of current scroll position
 
-  scrollLeft3() {
-    const container = document.querySelector('.carousel-items3') as HTMLElement;
+  scrollLeft5() {
+    const container = document.querySelector('.carousel-items5') as HTMLElement;
     const itemWidth = container.clientWidth; // Width of visible items
     this.scrollPosition = Math.max(this.scrollPosition - itemWidth, 0);
     container.style.transform = `translateX(-${this.scrollPosition}px)`; // Fixed: Use backticks
   }
   
-  scrollRight3() {
-    const container = document.querySelector('.carousel-items3') as HTMLElement;
+  scrollRight5() {
+    const container = document.querySelector('.carousel-items5') as HTMLElement;
     const itemWidth = container.clientWidth; // Width of visible items
     const maxScroll = container.scrollWidth - itemWidth; // Maximum scrollable area
     this.scrollPosition = Math.min(this.scrollPosition + itemWidth, maxScroll);

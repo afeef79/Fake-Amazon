@@ -1,19 +1,19 @@
 <div class="carousel-container">
     <div class="carousel-wrapper">
       <!-- Previous Button -->
-      <button class="carousel-button prev" (click)="scrollLeft3()">
+      <button class="carousel-button prev" (click)="scrollLeft5()">
         &#8249;
       </button>
       <!-- Carousel Items -->
       <div class="carousel">
-        <div class="carousel-items carousel-items3">
-            @for (x of items3; track x.name){
+        <div class="carousel-items carousel-items5">
+            @for (x of items5; track x.name){
             <img [src]="x.image" [alt]="x.name" class="carousel-image" loading="lazy" (click)="navigateToDetails()" >
     }
         </div>
       </div>
       <!-- Next Button -->
-      <button class="carousel-button next" (click)="scrollRight3()">
+      <button class="carousel-button next" (click)="scrollRight5()">
         &#8250;
       </button>
     </div>
@@ -128,7 +128,7 @@
   <br>
    <footer class="footer">
     <div class="footer-top">
-        <a [routerLink]="['/headersec']" class="back-to-top">Back to top</a>
+        <a href="#top" class="back-to-top">Back to Top</a>
     </div>
     <div class="footer-content">
       <div class="footer-column">
