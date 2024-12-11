@@ -1,42 +1,37 @@
 <div class="carousel-container">
     <div class="carousel-wrapper">
       <!-- Previous Button -->
-      <button class="carousel-button prev" (click)="scrollLeft()">
+      <button class="carousel-button prev" (click)="scrollLeft3()">
         &#8249;
       </button>
-  
       <!-- Carousel Items -->
       <div class="carousel">
-        <div class="carousel-items">
-          <!-- <div class="carousel-item" *ngFor="let item of items"> -->
-                    <!-- </div> -->
-
-            @for (x of items; track x.name){
-            <img [src]="x.image" [alt]="x.name" class="carousel-image" loading="lazy">
+        <div class="carousel-items carousel-items3">
+            @for (x of items3; track x.name){
+            <img [src]="x.image" [alt]="x.name" class="carousel-image" loading="lazy" (click)="navigateToDetails()" >
     }
         </div>
       </div>
-  
       <!-- Next Button -->
-      <button class="carousel-button next" (click)="scrollRight()">
+      <button class="carousel-button next" (click)="scrollRight3()">
         &#8250;
       </button>
     </div>
   </div>
+
   <h2 class="h2">today sale offer all products</h2>
   <div class="container">
      <div class="card">
       <h2>Starting ₹19999| Headphones</h2>
       <div class="card-items">
         @for (x of firstCategory; track x.name){
-        <div class="item">
+        <div class="item" (click)="navigateToDetails()">
           <img [src]="x.name + '.jpg'" alt="{{x.name}}">
           <p>Starting {{x.price}} | {{x.titel}}</p>
-          <p><a routerLink="product"> helloo</a></p>
         </div>
       }
       </div>
-      <a href="#" class="explore-link">See all offers</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See all offers</a>
     </div>
   
   
@@ -45,19 +40,20 @@
       <h2>Starting ₹19999 | Amazon Brands & more</h2>
       <div class="card-items">
         @for (x of secondCategory; track x.name){
-        <div class="item">
+        <div class="item" (click)="navigateToDetails()">
           <img [src]="x.name + '.jpg'" alt="{{x.name}}">
             <p>Starting ₹{{x.price}} | {{x.titel}}</p>
         </div>
       }
       </div>
-      <a href="#" class="explore-link">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
+
     </div>
   
     <!-- Fourth Card -->
      <div class="card">
       <h2>Starting ₹1599 | Brands Watch& more</h2>
-      <div class="card-items">
+      <div class="card-items" (click)="navigateToDetails()">
         @for (x of thirdCategory; track x.name){
         <div class="item">
           <img [src]="x.name + '.jpg'" alt="{{x.name}}">
@@ -66,7 +62,7 @@
       }
         
       </div>
-      <a href="#" class="explore-link">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
     </div>
 
     <!-- Fifth Card -->
@@ -91,19 +87,19 @@
     <div class="card">
       <h3>Up to 75% off | Wall arts, painting, </h3>
       @for (x of sixthCategory; track x.name){
-      <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+      <img [src]="x.name + '.jpg'" alt="{{x.name}}" (click)="navigateToDetails()">
       <P>{{x.titel}}</P>
       }
-      <a href="#">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
     </div>
     <!-- Card 2 -->
     <div class="card">
       <h3>Up to 75% off | Wall arts, painting, </h3>
       @for (x of sevnthCategory; track x.name){
-      <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+      <img [src]="x.name + '.jpg'" alt="{{x.name}}" (click)="navigateToDetails()">
       <P>{{x.titel}}</P>
       }
-      <a href="#">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
     </div>
     <!-- Card 3 -->
     <div class="card">
@@ -111,28 +107,28 @@
       <div class="card-items">
         @for (x of FifthCategory; track x.name){
         <div class="item">
-          <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+          <img [src]="x.name + '.jpg'" alt="{{x.name}}" (click)="navigateToDetails()">
             <p>Starting ₹{{x.price}} | {{x.titel}}</p>
         </div>
       }
       </div>
-      <a href="#" class="explore-link">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
     </div>
   
     <!-- Card 4 -->
     <div class="card">
       <h3>Up to 75% off | Wall arts, painting, </h3>
       @for (x of eithCategory; track x.name){
-      <img [src]="x.name + '.jpg'" alt="{{x.name}}">
+      <img [src]="x.name + '.jpg'" alt="{{x.name}}" (click)="navigateToDetails()">
       <P>{{x.titel}}</P>
       }
-      <a href="#">See more</a>
+      <a [routerLink]="['/seemore']" class="explore-link">See more</a>
     </div>
   </div>
   <br>
    <footer class="footer">
     <div class="footer-top">
-      <a href="#top" class="back-to-top">Back to top</a>
+        <a [routerLink]="['/headersec']" class="back-to-top">Back to top</a>
     </div>
     <div class="footer-content">
       <div class="footer-column">

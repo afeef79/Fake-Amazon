@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BottompageComponent } from './bottompage.component';
+import { SeemoreComponent } from './seemore.component';
 
-describe('BottompageComponent', () => {
-  let component: BottompageComponent;
-  let fixture: ComponentFixture<BottompageComponent>;
+describe('SeemoreComponent', () => {
+  let component: SeemoreComponent;
+  let fixture: ComponentFixture<SeemoreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BottompageComponent]
+      imports: [SeemoreComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BottompageComponent);
+    fixture = TestBed.createComponent(SeemoreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

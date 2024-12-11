@@ -164,7 +164,7 @@
 
 .carousel-image {
   max-width: 100%;
-  height: 300px;
+  height: 220px;
   display: block;
   padding: 10px;
   border-radius: 5px;
@@ -229,10 +229,12 @@ color: #7E93A4;
   border: 1px solid #ddd;
   padding: 1rem;
   width: 300px;
-  height: auto;
+  height: 350px;
   box-sizing: border-box;
   background-color: #ffffff;
   margin: 1rem;
+  margin-right: 10px;
+  
 }
 
 /* Product title */
@@ -364,10 +366,10 @@ color: #7E93A4;
   padding: 20px;
   text-align: center;
   border: 1px solid #ddd;
-  width: 320px;
+  width: 310px;
   position: absolute;
-  left: 330px;
-  top: 1780px;
+  left: 323px;
+  top: 1718px;
 }
 
 .deals-title {
@@ -410,7 +412,188 @@ color: #7E93A4;
 }
 
 .gadget-description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-top: 5px;
   text-align: center;
 }
+
+.products-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 300px;
+  height: 350px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin: 1rem;
+  position: absolute;
+  right:305px;
+  top: 1704px;
+}
+
+/* Product title */
+.products-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.products-image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.products-description {
+  font-size: 1rem;
+}
+
+.products-price {
+  font-size: 1.5rem;
+  color: black; /* Green color for price */
+}
+
+.products-mrp {
+  text-decoration: line-through;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Thumbnail slider */
+.thumbnails-slider {
+  display: flex;
+  // gap: 0.5rem;
+  // overflow-x: auto;
+}
+
+.thumbnails {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.thumbnails img {
+  width:70%;
+  object-fit: cover;
+  align-items: center;
+  padding: 5px;
+}
+
+/* See more link */
+.see-more {
+  color: #007bff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+.product-view {
+  text-align: center;
+}
+
+.main-image {
+  width: auto;
+  height: auto;
+  margin-left: 70px;
+  align-items: center;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnails {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+  align-items: center;
+}
+
+.thumbnails:hover {
+  border: 2px solid #007bff;
+}
+
+.thumbnails.selected {
+  border: 2px solid #007bff;
+  box-shadow: 0px 0px 6px #007bff;
+}
+@media (max-width: 768px) {
+  .main-image {
+    max-width: 90%;  /* Use 90% of the container width on medium screens (tablets) */
+  }
+
+  .thumbnails {
+    width: 60px;  /* Smaller thumbnails on tablets */
+  }
+}
+
+.buy-section {
+  flex: 1; /* All sections adjust equally */
+  background-color: white;
+  height: 350px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  width: 300px;
+  position: absolute;
+  left: 945px;
+  top: 1718px;
+}
+
+.buy-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.buy-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  color: #007185;
+  text-decoration: none;
+  display: inline-block;
+  // margin-right: 180px;
+  position: absolute;
+  top: 315px;
+  left: 25px;
+  text-align: left;
+}
+
+/* Furniture Grid */
+.headset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.headset-item {
+  text-align: center;
+}
+
+.headset-image {
+  width: 70%;
+  height: auto;
+}
+
+.headset-description {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
