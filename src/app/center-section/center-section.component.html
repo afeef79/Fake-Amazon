@@ -97,12 +97,107 @@
 
     <div class="thumbnail-slider">
       <div class="product-view">
-        <!-- Thumbnails -->
         <div class="thumbnails">
           <img *ngFor="let image of thumbnails" [src]="image" alt="Thumbnail" class="thumbnail"
             (click)="onThumbnailClick(image)" />
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="deals-section gadget-section">
+  <h2 class="deals-title">{{ gadget.title }}</h2>
+  <div class="gadget-grid">
+    <div class="gadget-item" *ngFor="let item of gadget.items">
+      <img [src]="item.image" alt="{{ item.description }}" class="gadget-image">
+      <p class="gadget-description">{{ item.description }}</p>
+    </div>
+  </div>
+  <a href="#" class="deals-button explore-button">Explore all</a>
+</div>
+
+<div class="products-card" *ngFor="let products of products">
+  <h3 class="products-title">{{ products.title }}</h3>
+  <div class="products-main">
+    <img [src]="selectedImage" alt="Main products Image" class="main-image" />
+    <p class="products-description">{{ products.description }}</p>
+    <p class="products-price">₹{{ products.price }} 
+          <span class="products-mrp">M.R.P: ₹{{ products.mrp }}</span>
+    </p>
+
+  <div class="thumbnails-slider">
+<div class="product-view">
+  <!-- Thumbnails -->
+  <div class="thumbnail">
+    <img
+      *ngFor="let image of thumbnails"
+      [src]="image"
+      alt="Thumbnail"
+      class="thumbnails"
+      (click)="onThumbnailClick(image)"
+    />
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="buy-section headset-section">
+  <h2 class="buy-title">{{ headset.title }}</h2>
+  <div class="headset-grid">
+    <div class="headset-item" *ngFor="let item of headset.items">
+      <img [src]="item.image" alt="{{ item.description }}" class="headset-image">
+      <p class="headset-description">{{ item.description }}</p>
+    </div>
+  </div>
+  <a href="#" class="buy-button explore-button">Explore all</a>
+</div>
+
+<!-- slide button -->
+<div class="carousel-container">
+  <h2 class="carousel-title">
+    Additional items to explore</h2>
+  <div class="carousel-wrapper">
+    <!-- Previous Button -->
+    <button class="carousel-button prev" (click)="scrollLeft3()">
+      &#8249;
+    </button>
+    <!-- Carousel Items -->
+    <div class="carousel">
+      <div class="carousel-items carousel-items3">
+        @for (x of items3; track x.name){
+          <img [src]="x.image" [alt]="x.name" class="carousel-image">
+        }
+      </div>
+    </div>
+    <!-- Next Button -->
+    <button class="carousel-button next" (click)="scrollRight3()">
+      &#8250;
+    </button>
+  </div>
+</div>
+
+<!-- slide button -->
+<div class="carousel-container">
+  <h2 class="carousel-title">
+    Up to 70% off | Kitchen tools, water bottles & more from emerging brands</h2>
+  <div class="carousel-wrapper">
+    <!-- Previous Button -->
+    <button class="carousel-button prev" (click)="scrollLeft4()">
+      &#8249;
+    </button>
+    <!-- Carousel Items -->
+    <div class="carousel">
+      <div class="carousel-items carousel-items4">
+        @for (x of items4; track x.name){
+          <img [src]="x.image" [alt]="x.name" class="carousel-image">
+        }
+      </div>
+    </div>
+    <!-- Next Button -->
+    <button class="carousel-button next" (click)="scrollRight4()">
+      &#8250;
+    </button>
   </div>
 </div>

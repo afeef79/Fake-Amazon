@@ -29,6 +29,8 @@ export class LoginComponent {
  }
 
 onSubmit(){
+  
+
   const logindata=this.login.value
   console.log(logindata);
   
