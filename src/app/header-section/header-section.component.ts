@@ -21,13 +21,13 @@ export class HeaderSectionComponent implements AfterViewInit{
 
 //add more image this arry
   images = [
-    'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Isha/RedmiA4/27th/D174826513_PC_Hero_3000x1200._CB540514119_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/img21/APAY/BAU/travel/Hero-dex-3000x1200-._CB540530434_.jpg',
     'https://m.media-amazon.com/images/I/710qQ1b1q3L._SX3000_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/BISS_2024/Nov/GW/ATF/27th/PC/3000x1200_PC_1._CB540527941_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/OnePlus/Nord/Nord4/16thNov24/3000x1200._CB541393352_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/PC_Laptops/November_MED/MED_Hero_PC_3000x1200._CB542093350_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/2024/Gateway/November/pc_27th_Nov._CB540527407_.jpg',
+    'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Isha/RedmiA4/27th/D174826513_PC_Hero_3000x1200._CB540514119_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/BAU/PC/Hero/HO/PSE/PSE_PC_3000X1200_T1._CB567196011_.jpg',
   ];
 
