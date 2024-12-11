@@ -82,7 +82,7 @@ export class FooterComponent {
     console.log('Video is being watched!');
   }
   navigateToDetails() {
-    this.routes.navigate(['/privacypolicy']);
+    this.routes.navigate(['details/:id']);
     console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbb");
     
   }

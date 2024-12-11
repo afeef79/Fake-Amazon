@@ -1,0 +1,86 @@
+.container {
+  font-family: 'Amazon Ember', sans-serif;
+}
+.product-title{
+    font-size: 24px;
+    line-height: 32px;
+}
+  .main-image {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+  .main-image img {
+    width: 100%;
+    height: auto;
+  }
+  .top-right-div {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #FFFFFF;
+    width: 240px;
+    height: 400px;
+    margin-top: 58px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .sponsored-section img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .sponsored-section {
+    margin-top: 10px;
+  }
+.icon-img {
+  width: 35px;
+  height: 35px;
+}
+.small{
+  font-size: 13px;
+}
+.container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.left-panel {
+  height: 100vh;
+  overflow: hidden; 
+}
+.scrollable-content {
+  height: 100vh; 
+  overflow-y: auto; 
+  padding: 20px;
+  background-color: #FFFFFF; 
+}
+.product-title {
+  font-size: 24px;
+  line-height: 32px;
+}
+.icon-img {
+  width: 35px;
+  height: 35px;
+}
+hr.custom-hr {
+  border: 1px solid #ddd;
+  width: 340px;
+  margin: 10px auto;
+}
+.icon-section{
+  margin-right: 300px;
+}
+.img-thumbnail{
+  object-fit: cover; 
+  border-radius: 8px; 
+  transition: transform 0.2s ease-in-out; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.img-thumbnail:hover{
+  transform: scale(1.1); 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); 
+}
