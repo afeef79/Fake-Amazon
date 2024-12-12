@@ -16,7 +16,7 @@ export class UserService {
         console.error('Error parsing signup data from localStorage', error);
       }
     }
-  }
+  } 
 
   savesignupdata(data: any):void{
     // console.log('Before push, signupdata:', this.signupdata);

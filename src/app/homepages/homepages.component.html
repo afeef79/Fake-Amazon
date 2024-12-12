@@ -1,0 +1,108 @@
+<div class="amazon-container">
+  <!-- Prime Video Section -->
+  <div class="prime-video-section">
+    <img [src]="recommendedVideo.image" alt="Prime Video" class="prime-video-image">
+    <div class="prime-video-content">
+      <h2 class="prime-video-title">{{ recommendedVideo.title }}</h2>
+      <p class="prime-video-name">{{ recommendedVideo.name }}</p>
+      <button class="prime-video-button" (click)="videowatch()">Start watching on Prime Video</button>
+    </div>
+  </div>
+
+  <!-- Headphones Section -->
+  <div class="deal-section headphones-section">
+    <h2 class="deal-title">{{ headphones.title }}</h2>
+    <img [src]="headphones.image" alt="Headphones" class="deal-image">
+    <a href="#" class="deal-button">Shop Now</a>
+  </div>
+
+  <!-- Furniture Section -->
+  <div class="deal-section furniture-section">
+    <h2 class="deal-title">{{ furniture.title }}</h2>
+    <div class="furniture-grid">
+      <div class="furniture-item" *ngFor="let item of furniture.items">
+        <img [src]="item.image" alt="{{ item.description }}" class="furniture-image">
+        <p class="furniture-description">{{ item.description }}</p>
+      </div>
+    </div>
+    <a href="#" class="deal-button explore-button">Explore all</a>
+  </div>
+</div>
+
+<!-- first carousel starts here-->
+<!-- slide button -->
+<div class="carousel-container">
+  <h2 class="carousel-title">
+    Related to items you've viewed
+    <button class="seemore">See more</button>
+  </h2>
+  <div class="carousel-wrapper">
+    <!-- Previous Button -->
+    <button class="carousel-button prev" (click)="scrollLeft()">
+      &#8249;
+    </button>
+    <!-- Carousel Items -->
+    <div class="carousel">
+      <div class="carousel-items carousel-items1">
+        @for (x of items; track x.name){
+        <img [src]="x.image" [alt]="x.name" class="carousel-image">
+        }
+      </div>
+    </div>
+    <!-- Next Button -->
+    <button class="carousel-button next" (click)="scrollRight()">
+      &#8250;
+    </button>
+  </div>
+</div>
+
+<!-- first couroserl ends here-->
+
+
+
+<!-- Second carousel starts here-->
+<!-- slide button -->
+<div class="carousel-container">
+  <h2 class="carousel-title">
+    You might also like</h2>
+  <div class="carousel-wrapper">
+    <!-- Previous Button -->
+    <button class="carousel-button prev" (click)="scrollLeft2()">
+      &#8249;
+    </button>
+    <!-- Carousel Items -->
+    <div class="carousel">
+      <div class="carousel-items carousel-items2">
+        @for (x of items2; track x.name){
+          <img [src]="x.image" [alt]="x.name" class="carousel-image">
+        }
+      </div>
+    </div>
+    <!-- Next Button -->
+    <button class="carousel-button next" (click)="scrollRight2()">
+      &#8250;
+    </button>
+  </div>
+</div>
+
+<!-- Second couroserl ends here-->
+<div class="product-card" *ngFor="let product of products">
+  <h3 class="product-title">{{ product.title }}</h3>
+  <div class="product-main">
+    <img [src]="selectedImage" alt="Main Product Image" class="main-image" />
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">₹{{ product.price }}
+      <span class="product-mrp">M.R.P: ₹{{ product.mrp }}</span>
+    </p>
+
+    <div class="thumbnail-slider">
+      <div class="product-view">
+        <!-- Thumbnails -->
+        <div class="thumbnails">
+          <img *ngFor="let image of thumbnails" [src]="image" alt="Thumbnail" class="thumbnail"
+            (click)="onThumbnailClick(image)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
