@@ -41,7 +41,9 @@
       </div>
 
       <div class="product-details mt-5">
+        <div style="width: 350px;height: 250px;">
         <p class="product-title">{{ product.name }}</p>
+      </div>
         <p style="font-size: 14px; line-height: 24px; color: #0C59AC;">Visit the {{ product.store }} Store</p>
         <p style="font-size: 18px; font-weight: 500;">₹{{ product.price | number }}</p>
         <p>
@@ -49,14 +51,14 @@
           <span style="color: #0450a1; font-size: 14px; margin-left: 20px;">{{ product.reviews }} ratings</span>
         </p>
 
-      <hr style="width: 305px;"/>
+      <hr style="width: 355px;"/>
 <div class="icon-section d-flex justify-content-center align-items-center">
   <div class="icon-item mx-3" *ngFor="let feature of iconimg.features">
     <img [src]="feature.icon" [alt]="feature.alt" class="icon-img mb-2" />
     <p class="small text-primary">{{ feature.text }}</p>
   </div>
 </div>
-<hr style="width: 360px;" />
+<hr style="width: 600px;" />
 
         
 
@@ -79,11 +81,13 @@
 
         <hr />
         <p style="font-size: 16px; font-weight: 700;">About this item</p>
+        <div style="width: 480px;height: 145vh;">
         <ul *ngIf="product.About?.trim()">
           <li *ngFor="let item of product.About.split('•')">
             {{ item.trim() }}
           </li>
         </ul>
+      </div>
       </div>
     </div>
   </div>

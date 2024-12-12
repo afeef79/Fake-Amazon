@@ -41,7 +41,7 @@ getCartItems() {
 }
 buynowdata(data:any){
   const buydata=data;
-  localStorage.setItem('buynowdata',JSON.stringify(this))
+  localStorage.setItem('buynowdata',JSON.stringify(buydata))
 
 }
 // details(id:string){

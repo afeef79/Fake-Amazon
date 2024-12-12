@@ -24,7 +24,7 @@
         </label><br>
         <button type="submit" id="amazon" >Continue</button>
         <p>By continuing, you agree to Amazon's <a  routerLink="/customerservice">Conditions of use </a> and
-           <a  routerLink="/customerservice">Privacy Notice</a></p>
+           <a  routerLink="/privacypolicy">Privacy Notice</a></p>
       </div>
       <div id="createnewaccount">
         <div class="line-with-text">
@@ -35,12 +35,13 @@
       <div id="divider"></div>
       <div id="footer">
         <a routerLink="/customerservice">Conditions of Use </a>
-        <a routerLink="/customerservice">Privacy Notice</a>
+        <a routerLink="/privacypolicy">Privacy Notice</a>
         <a routerLink="/customerservice">Help</a><br>
         <span class="links" id="special">
           © 1996-2024, Amazon.com, Inc. or its affiliates</span>
       </div>
     </form>
+    <app-home *ngIf="isViewVisible"></app-home>
   </div>
 </body>
 

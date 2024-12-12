@@ -3,11 +3,12 @@ import { ProductService } from '../product.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { DetailsComponent } from '../login/details/details.component';
+import { HeaderSectionComponent } from "../header-section/header-section.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,DetailsComponent],
+  imports: [CommonModule,DetailsComponent,HeaderSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -21,5 +22,7 @@ console.log(this.getdata);
 navigateToDetails(productId: string): void {
   this.router.navigate(['/details', productId]);
 }
-
+ 
 }
+
+
